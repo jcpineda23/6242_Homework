@@ -1,0 +1,1094 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20213.21.0822.2038                               -->
+<workbook source-build='2021.3.0 (20213.21.0822.2038)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AccessibleZoneTabOrder.true...AccessibleZoneTabOrder />
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='popular_board_game' inline='true' name='federated.11gdwo40hsgk1w11izs5y1svq8ir' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='popular_board_game_ds' name='textscan.1acsnf90g3phpx1f1w1ek1nu87x7'>
+            <connection class='textscan' directory='/Users/jcpineda/Google Drive/GA Tech/6242/Homework/HW2/yjJD50ngDa_hw2/Q1' filename='popular_board_game.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.1acsnf90g3phpx1f1w1ek1nu87x7' name='popular_board_game.csv' table='[popular_board_game#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='name' ordinal='0' />
+            <column datatype='string' name='category' ordinal='1' />
+            <column datatype='string' name='playtime' ordinal='2' />
+            <column datatype='integer' name='playtime_num' ordinal='3' />
+            <column datatype='real' name='avg_rating' ordinal='4' />
+            <column datatype='integer' name='num_ratings' ordinal='5' />
+            <column datatype='integer' name='min_players' ordinal='6' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.1acsnf90g3phpx1f1w1ek1nu87x7' name='popular_board_game.csv' table='[popular_board_game#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='name' ordinal='0' />
+            <column datatype='string' name='category' ordinal='1' />
+            <column datatype='string' name='playtime' ordinal='2' />
+            <column datatype='integer' name='playtime_num' ordinal='3' />
+            <column datatype='real' name='avg_rating' ordinal='4' />
+            <column datatype='integer' name='num_ratings' ordinal='5' />
+            <column datatype='integer' name='min_players' ordinal='6' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[popular_board_game.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[name]</local-name>
+            <parent-name>[popular_board_game.csv]</parent-name>
+            <remote-alias>name</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>category</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[category]</local-name>
+            <parent-name>[popular_board_game.csv]</parent-name>
+            <remote-alias>category</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>playtime</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[playtime]</local-name>
+            <parent-name>[popular_board_game.csv]</parent-name>
+            <remote-alias>playtime</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>playtime_num</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[playtime_num]</local-name>
+            <parent-name>[popular_board_game.csv]</parent-name>
+            <remote-alias>playtime_num</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_rating</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_rating]</local-name>
+            <parent-name>[popular_board_game.csv]</parent-name>
+            <remote-alias>avg_rating</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>num_ratings</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[num_ratings]</local-name>
+            <parent-name>[popular_board_game.csv]</parent-name>
+            <remote-alias>num_ratings</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>min_players</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[min_players]</local-name>
+            <parent-name>[popular_board_game.csv]</parent-name>
+            <remote-alias>min_players</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='SupportsOne' datatype='string' name='[Calculation_7025122858597588993]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [min_players] == 1 then &quot;Supports Solo&quot; &#10;ELSE &quot;Not support Solo&quot;&#10;END' />
+      </column>
+      <column caption='TotalNumGames' datatype='integer' name='[Calculation_7025122858794610691]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNT([category] )' />
+      </column>
+      <column caption='AvgPlayTime' datatype='real' name='[Calculation_7025122858795151364]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='ROUND(AVG([playtime_num]),2)' />
+      </column>
+      <column caption='Avg. Rating' datatype='real' name='[Calculation_7025122858799476741]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='ROUND(AVG([avg_rating]), 2)' />
+      </column>
+      <column caption='BestNumRatings' datatype='integer' name='[Calculation_7025122858806132742]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='MAX([num_ratings])' />
+      </column>
+      <column caption='MostRepresentative' datatype='string' name='[Calculation_7025122858811330567]' role='measure' type='nominal'>
+        <calculation class='tableau' formula='IF MAX([num_ratings]) == [Calculation_7025122858806132742] &#10;THEN MAX([name])&#10;END' />
+      </column>
+      <_.fcp.ObjectModelTableType.true...column caption='popular_board_game.csv' datatype='table' name='[__tableau_internal_object_id__].[popular_board_game.csv_1A407F2DE07D42F5B82B059BF9245AD5]' role='measure' type='quantitative' />
+      <column caption='Avg Rating' datatype='real' name='[avg_rating]' role='measure' type='quantitative' />
+      <column caption='Category' datatype='string' name='[category]' role='dimension' type='nominal' />
+      <column caption='Min Players' datatype='integer' name='[min_players]' role='measure' type='quantitative' />
+      <column caption='Name' datatype='string' name='[name]' role='dimension' type='nominal' />
+      <column caption='Num Ratings' datatype='integer' name='[num_ratings]' role='measure' type='quantitative' />
+      <column caption='Playtime' datatype='string' name='[playtime]' role='dimension' type='nominal' />
+      <column caption='Playtime Num' datatype='integer' name='[playtime_num]' role='dimension' type='ordinal' />
+      <column-instance column='[__tableau_internal_object_id__].[popular_board_game.csv_1A407F2DE07D42F5B82B059BF9245AD5]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:popular_board_game.csv_1A407F2DE07D42F5B82B059BF9245AD5:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[avg_rating]' derivation='Attribute' name='[attr:avg_rating:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[min_players]' derivation='Attribute' name='[attr:min_players:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[avg_rating]' derivation='Avg' name='[avg:avg_rating:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[category]' derivation='Count' name='[cnt:category:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[category]' derivation='CountD' name='[ctd:category:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[avg_rating]' derivation='Max' name='[max:avg_rating:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[category]' derivation='None' name='[none:category:nk]' pivot='key' type='nominal' />
+      <column-instance column='[min_players]' derivation='None' name='[none:min_players:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[avg_rating]' derivation='Sum' name='[sum:avg_rating:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[min_players]' derivation='Sum' name='[sum:min_players:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[min_players]' derivation='Sum' name='[sum:min_players:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[num_ratings]' derivation='Sum' name='[sum:num_ratings:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_7025122858794610691]' derivation='User' name='[usr:Calculation_7025122858794610691:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_7025122858795151364]' derivation='User' name='[usr:Calculation_7025122858795151364:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_7025122858799476741]' derivation='User' name='[usr:Calculation_7025122858799476741:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_7025122858806132742]' derivation='User' name='[usr:Calculation_7025122858806132742:qk]' pivot='key' type='quantitative' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.11gdwo40hsgk1w11izs5y1svq8ir]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.11gdwo40hsgk1w11izs5y1svq8ir].[sum:num_ratings:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.11gdwo40hsgk1w11izs5y1svq8ir].[attr:min_players:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.11gdwo40hsgk1w11izs5y1svq8ir].[cnt:category:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.11gdwo40hsgk1w11izs5y1svq8ir].[ctd:category:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.11gdwo40hsgk1w11izs5y1svq8ir].[none:category:nk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.11gdwo40hsgk1w11izs5y1svq8ir].[none:min_players:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.11gdwo40hsgk1w11izs5y1svq8ir].[sum:min_players:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.1dcr6oy0hyxoza10hukj80ncjwoz].[none:mechanics:nk]&quot;</bucket>
+            </map>
+            <map to='#9c755f'>
+              <bucket>&quot;[federated.11gdwo40hsgk1w11izs5y1svq8ir].[usr:Calculation_7025122858794610691:qk]&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;[federated.11gdwo40hsgk1w11izs5y1svq8ir].[usr:Calculation_7025122858795151364:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.11gdwo40hsgk1w11izs5y1svq8ir].[__tableau_internal_object_id__].[cnt:popular_board_game.csv_1A407F2DE07D42F5B82B059BF9245AD5:qk]&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;[federated.11gdwo40hsgk1w11izs5y1svq8ir].[usr:Calculation_7025122858799476741:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.11gdwo40hsgk1w11izs5y1svq8ir].[attr:avg_rating:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.11gdwo40hsgk1w11izs5y1svq8ir].[avg:avg_rating:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.11gdwo40hsgk1w11izs5y1svq8ir].[max:avg_rating:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.11gdwo40hsgk1w11izs5y1svq8ir].[sum:avg_rating:qk]&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;[federated.11gdwo40hsgk1w11izs5y1svq8ir].[usr:Calculation_7025122858806132742:qk]&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[sum:min_players:ok]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>46</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>162</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>135</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>48</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>122</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>514</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>49</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>466</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <datasource-dependencies datasource='federated.1dcr6oy0hyxoza10hukj80ncjwoz'>
+        <column caption='Mechanics' datatype='string' name='[mechanics]' role='dimension' type='nominal' />
+        <column-instance column='[mechanics]' derivation='None' name='[none:mechanics:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='popular_board_game.csv' id='popular_board_game.csv_1A407F2DE07D42F5B82B059BF9245AD5'>
+            <properties context=''>
+              <relation connection='textscan.1acsnf90g3phpx1f1w1ek1nu87x7' name='popular_board_game.csv' table='[popular_board_game#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='name' ordinal='0' />
+                  <column datatype='string' name='category' ordinal='1' />
+                  <column datatype='string' name='playtime' ordinal='2' />
+                  <column datatype='integer' name='playtime_num' ordinal='3' />
+                  <column datatype='real' name='avg_rating' ordinal='4' />
+                  <column datatype='integer' name='num_ratings' ordinal='5' />
+                  <column datatype='integer' name='min_players' ordinal='6' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+    <datasource caption='mjpetrey/boardgamegeek' inline='true' name='federated.1dcr6oy0hyxoza10hukj80ncjwoz' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='mjpetrey/boardgamegeek' name='webdata-direct.08gfxdh0sacp8017trkyg1qd8duj'>
+            <connection APIVersion='' authType='custom' authentication='yes' channel='https' class='webdata-direct' connectionData='{&quot;dataset&quot;:&quot;mjpetrey/boardgamegeek&quot;,&quot;query&quot;:&quot;SELECT * FROM games_detailed_info_filtered&quot;,&quot;queryType&quot;:&quot;sql&quot;,&quot;version&quot;:&quot;1.1.0&quot;}' connectionName='mjpetrey/boardgamegeek' filename='' increment-key='' path='/' port='443' scriptVersion='' secondary_whitelist='' server='tableau.data.world' urlQuery='state=83045220-1db4-11ec-8e18-e7ad6c71e4ac' username='' usernameAlias='' />
+          </named-connection>
+          <named-connection caption='popular_board_game' name='textscan.11l9aw41rdqc9b1f9y6bu0shdmwu'>
+            <connection class='textscan' directory='/Users/jcpineda/Google Drive/GA Tech/6242/Homework/HW2/yjJD50ngDa_hw2/Q1' filename='popular_board_game.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='webdata-direct.08gfxdh0sacp8017trkyg1qd8duj' name='Query Results' table='[QueryTable]' type='table' />
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='webdata-direct.08gfxdh0sacp8017trkyg1qd8duj' name='Query Results' table='[QueryTable]' type='table' />
+          <relation connection='textscan.11l9aw41rdqc9b1f9y6bu0shdmwu' name='popular_board_game.csv' table='[popular_board_game#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='string' name='name' ordinal='0' />
+              <column datatype='string' name='category' ordinal='1' />
+              <column datatype='string' name='playtime' ordinal='2' />
+              <column datatype='integer' name='playtime_num' ordinal='3' />
+              <column datatype='real' name='avg_rating' ordinal='4' />
+              <column datatype='integer' name='num_ratings' ordinal='5' />
+              <column datatype='integer' name='min_players' ordinal='6' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[avg_rating]' value='[popular_board_game.csv].[avg_rating]' />
+          <map key='[category (popular_board_game.csv)]' value='[popular_board_game.csv].[category]' />
+          <map key='[category]' value='[Query Results].[category]' />
+          <map key='[max_players]' value='[Query Results].[max_players]' />
+          <map key='[mechanics]' value='[Query Results].[mechanics]' />
+          <map key='[min_players]' value='[popular_board_game.csv].[min_players]' />
+          <map key='[name]' value='[popular_board_game.csv].[name]' />
+          <map key='[num_ratings]' value='[popular_board_game.csv].[num_ratings]' />
+          <map key='[playtime]' value='[popular_board_game.csv].[playtime]' />
+          <map key='[playtime_num]' value='[popular_board_game.csv].[playtime_num]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[popular_board_game.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>category</remote-name>
+            <remote-type>-1</remote-type>
+            <local-name>[category]</local-name>
+            <parent-name>[Query Results]</parent-name>
+            <remote-alias>category</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='RemoteTypeName'>&quot;string&quot;</attribute>
+              <attribute datatype='boolean' name='filterable_column'>false</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[QueryTable_AF7F84FB375C4210A7744650101BA6FF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>mechanics</remote-name>
+            <remote-type>-1</remote-type>
+            <local-name>[mechanics]</local-name>
+            <parent-name>[Query Results]</parent-name>
+            <remote-alias>mechanics</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='RemoteTypeName'>&quot;string&quot;</attribute>
+              <attribute datatype='boolean' name='filterable_column'>false</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[QueryTable_AF7F84FB375C4210A7744650101BA6FF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>max_players</remote-name>
+            <remote-type>-1</remote-type>
+            <local-name>[max_players]</local-name>
+            <parent-name>[Query Results]</parent-name>
+            <remote-alias>max_players</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='RemoteTypeName'>&quot;string&quot;</attribute>
+              <attribute datatype='boolean' name='filterable_column'>false</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[QueryTable_AF7F84FB375C4210A7744650101BA6FF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[name]</local-name>
+            <parent-name>[popular_board_game.csv]</parent-name>
+            <remote-alias>name</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[popular_board_game.csv_DCCF219ED1434AC292A272F95EC2681F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>category</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[category (popular_board_game.csv)]</local-name>
+            <parent-name>[popular_board_game.csv]</parent-name>
+            <remote-alias>category</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[popular_board_game.csv_DCCF219ED1434AC292A272F95EC2681F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>playtime</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[playtime]</local-name>
+            <parent-name>[popular_board_game.csv]</parent-name>
+            <remote-alias>playtime</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[popular_board_game.csv_DCCF219ED1434AC292A272F95EC2681F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>playtime_num</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[playtime_num]</local-name>
+            <parent-name>[popular_board_game.csv]</parent-name>
+            <remote-alias>playtime_num</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[popular_board_game.csv_DCCF219ED1434AC292A272F95EC2681F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_rating</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_rating]</local-name>
+            <parent-name>[popular_board_game.csv]</parent-name>
+            <remote-alias>avg_rating</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[popular_board_game.csv_DCCF219ED1434AC292A272F95EC2681F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>num_ratings</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[num_ratings]</local-name>
+            <parent-name>[popular_board_game.csv]</parent-name>
+            <remote-alias>num_ratings</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[popular_board_game.csv_DCCF219ED1434AC292A272F95EC2681F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>min_players</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[min_players]</local-name>
+            <parent-name>[popular_board_game.csv]</parent-name>
+            <remote-alias>min_players</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[popular_board_game.csv_DCCF219ED1434AC292A272F95EC2681F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Measure Names' datatype='string' name='[:Measure Names]' role='dimension' type='nominal' />
+      <column caption='CountGames' datatype='integer' name='[Calculation_7025122859118927880]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNT([category])' />
+      </column>
+      <column caption='Measure Values' datatype='real' name='[Multiple Values]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='Query Results' datatype='table' name='[__tableau_internal_object_id__].[QueryTable_AF7F84FB375C4210A7744650101BA6FF]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='popular_board_game.csv' datatype='table' name='[__tableau_internal_object_id__].[popular_board_game.csv_DCCF219ED1434AC292A272F95EC2681F]' role='measure' type='quantitative' />
+      <column caption='Avg Rating' datatype='real' name='[avg_rating]' role='measure' type='quantitative' />
+      <column caption='Category (Popular Board Game.Csv)' datatype='string' name='[category (popular_board_game.csv)]' role='dimension' type='nominal' />
+      <column caption='Category' datatype='string' name='[category]' role='dimension' type='nominal' />
+      <column caption='Max Players' datatype='string' name='[max_players]' role='dimension' type='nominal' />
+      <column caption='Mechanics' datatype='string' name='[mechanics]' role='dimension' type='nominal' />
+      <column caption='Min Players' datatype='integer' name='[min_players]' role='measure' type='quantitative' />
+      <column caption='Name' datatype='string' name='[name]' role='dimension' type='nominal' />
+      <column caption='Num Ratings' datatype='integer' name='[num_ratings]' role='measure' type='quantitative' />
+      <column caption='Playtime' datatype='string' name='[playtime]' role='dimension' type='nominal' />
+      <column caption='Playtime Num' datatype='integer' name='[playtime_num]' role='dimension' type='ordinal' />
+      <column-instance column='[mechanics]' derivation='None' name='[none:mechanics:nk]' pivot='key' type='nominal' />
+      <extract _.fcp.ObjectModelExtractV2.true...object-id='' count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='/Users/jcpineda/Documents/My Tableau Repository/Datasources/federated.1dcr6oy0hyxoza10hukj80ncjwoz_0a7uk7h05guxtd190r6wx0pfax03.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='' username='tableau_internal_user'>
+          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='QueryTable_AF7F84FB375C4210A7744650101BA6FF' table='[Extract].[QueryTable_AF7F84FB375C4210A7744650101BA6FF]' type='table' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+            <relation name='QueryTable_AF7F84FB375C4210A7744650101BA6FF' table='[Extract].[QueryTable_AF7F84FB375C4210A7744650101BA6FF]' type='table' />
+            <relation name='popular_board_game.csv_DCCF219ED1434AC292A272F95EC2681F' table='[Extract].[popular_board_game.csv_DCCF219ED1434AC292A272F95EC2681F]' type='table' />
+          </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+          <cols>
+            <map key='[avg_rating]' value='[popular_board_game.csv_DCCF219ED1434AC292A272F95EC2681F].[avg_rating]' />
+            <map key='[category (popular_board_game.csv)]' value='[popular_board_game.csv_DCCF219ED1434AC292A272F95EC2681F].[category]' />
+            <map key='[category]' value='[QueryTable_AF7F84FB375C4210A7744650101BA6FF].[category]' />
+            <map key='[max_players]' value='[QueryTable_AF7F84FB375C4210A7744650101BA6FF].[max_players]' />
+            <map key='[mechanics]' value='[QueryTable_AF7F84FB375C4210A7744650101BA6FF].[mechanics]' />
+            <map key='[min_players]' value='[popular_board_game.csv_DCCF219ED1434AC292A272F95EC2681F].[min_players]' />
+            <map key='[name]' value='[popular_board_game.csv_DCCF219ED1434AC292A272F95EC2681F].[name]' />
+            <map key='[num_ratings]' value='[popular_board_game.csv_DCCF219ED1434AC292A272F95EC2681F].[num_ratings]' />
+            <map key='[playtime]' value='[popular_board_game.csv_DCCF219ED1434AC292A272F95EC2681F].[playtime]' />
+            <map key='[playtime_num]' value='[popular_board_game.csv_DCCF219ED1434AC292A272F95EC2681F].[playtime_num]' />
+          </cols>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>category</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[category]</local-name>
+              <parent-name>[QueryTable_AF7F84FB375C4210A7744650101BA6FF]</parent-name>
+              <remote-alias>category</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Query Results</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='binary' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[QueryTable_AF7F84FB375C4210A7744650101BA6FF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>mechanics</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[mechanics]</local-name>
+              <parent-name>[QueryTable_AF7F84FB375C4210A7744650101BA6FF]</parent-name>
+              <remote-alias>mechanics</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Query Results</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='binary' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[QueryTable_AF7F84FB375C4210A7744650101BA6FF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>max_players</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[max_players]</local-name>
+              <parent-name>[QueryTable_AF7F84FB375C4210A7744650101BA6FF]</parent-name>
+              <remote-alias>max_players</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Query Results</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='binary' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[QueryTable_AF7F84FB375C4210A7744650101BA6FF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[name]</local-name>
+              <parent-name>[popular_board_game.csv_DCCF219ED1434AC292A272F95EC2681F]</parent-name>
+              <remote-alias>name</remote-alias>
+              <ordinal>3</ordinal>
+              <family>popular_board_game.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>244</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[popular_board_game.csv_DCCF219ED1434AC292A272F95EC2681F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>category</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[category (popular_board_game.csv)]</local-name>
+              <parent-name>[popular_board_game.csv_DCCF219ED1434AC292A272F95EC2681F]</parent-name>
+              <remote-alias>category</remote-alias>
+              <ordinal>4</ordinal>
+              <family>popular_board_game.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[popular_board_game.csv_DCCF219ED1434AC292A272F95EC2681F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>playtime</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[playtime]</local-name>
+              <parent-name>[popular_board_game.csv_DCCF219ED1434AC292A272F95EC2681F]</parent-name>
+              <remote-alias>playtime</remote-alias>
+              <ordinal>5</ordinal>
+              <family>popular_board_game.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[popular_board_game.csv_DCCF219ED1434AC292A272F95EC2681F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>playtime_num</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[playtime_num]</local-name>
+              <parent-name>[popular_board_game.csv_DCCF219ED1434AC292A272F95EC2681F]</parent-name>
+              <remote-alias>playtime_num</remote-alias>
+              <ordinal>6</ordinal>
+              <family>popular_board_game.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>25</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[popular_board_game.csv_DCCF219ED1434AC292A272F95EC2681F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>avg_rating</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[avg_rating]</local-name>
+              <parent-name>[popular_board_game.csv_DCCF219ED1434AC292A272F95EC2681F]</parent-name>
+              <remote-alias>avg_rating</remote-alias>
+              <ordinal>7</ordinal>
+              <family>popular_board_game.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>244</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[popular_board_game.csv_DCCF219ED1434AC292A272F95EC2681F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>num_ratings</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[num_ratings]</local-name>
+              <parent-name>[popular_board_game.csv_DCCF219ED1434AC292A272F95EC2681F]</parent-name>
+              <remote-alias>num_ratings</remote-alias>
+              <ordinal>8</ordinal>
+              <family>popular_board_game.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>244</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[popular_board_game.csv_DCCF219ED1434AC292A272F95EC2681F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>min_players</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[min_players]</local-name>
+              <parent-name>[popular_board_game.csv_DCCF219ED1434AC292A272F95EC2681F]</parent-name>
+              <remote-alias>min_players</remote-alias>
+              <ordinal>9</ordinal>
+              <family>popular_board_game.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[popular_board_game.csv_DCCF219ED1434AC292A272F95EC2681F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:mechanics:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Card Drafting&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Modular Board&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Memory&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Hand Management&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Dice Rolling&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Query Results' id='QueryTable_AF7F84FB375C4210A7744650101BA6FF'>
+            <properties context=''>
+              <relation connection='webdata-direct.08gfxdh0sacp8017trkyg1qd8duj' name='Query Results' table='[QueryTable]' type='table' />
+            </properties>
+            <properties context='extract'>
+              <relation name='QueryTable_AF7F84FB375C4210A7744650101BA6FF' table='[Extract].[QueryTable_AF7F84FB375C4210A7744650101BA6FF]' type='table' />
+            </properties>
+          </object>
+          <object caption='popular_board_game.csv' id='popular_board_game.csv_DCCF219ED1434AC292A272F95EC2681F'>
+            <properties context=''>
+              <relation connection='textscan.11l9aw41rdqc9b1f9y6bu0shdmwu' name='popular_board_game.csv' table='[popular_board_game#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='name' ordinal='0' />
+                  <column datatype='string' name='category' ordinal='1' />
+                  <column datatype='string' name='playtime' ordinal='2' />
+                  <column datatype='integer' name='playtime_num' ordinal='3' />
+                  <column datatype='real' name='avg_rating' ordinal='4' />
+                  <column datatype='integer' name='num_ratings' ordinal='5' />
+                  <column datatype='integer' name='min_players' ordinal='6' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='popular_board_game.csv_DCCF219ED1434AC292A272F95EC2681F' table='[Extract].[popular_board_game.csv_DCCF219ED1434AC292A272F95EC2681F]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[category]' />
+              <expression op='[category (popular_board_game.csv)]' />
+            </expression>
+            <first-end-point object-id='QueryTable_AF7F84FB375C4210A7744650101BA6FF' />
+            <second-end-point object-id='popular_board_game.csv_DCCF219ED1434AC292A272F95EC2681F' />
+          </relationship>
+        </relationships>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Q1 a - Good Table Design</run>
+          </formatted-text>
+        </title>
+        <caption>
+          <formatted-text>
+            <run>jpineda32</run>
+          </formatted-text>
+        </caption>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='popular_board_game' name='federated.11gdwo40hsgk1w11izs5y1svq8ir' />
+          </datasources>
+          <datasource-dependencies datasource='federated.11gdwo40hsgk1w11izs5y1svq8ir'>
+            <column caption='SupportsOne' datatype='string' name='[Calculation_7025122858597588993]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [min_players] == 1 then &quot;Supports Solo&quot; &#10;ELSE &quot;Not support Solo&quot;&#10;END' />
+            </column>
+            <column caption='TotalNumGames' datatype='integer' name='[Calculation_7025122858794610691]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNT([category] )' />
+            </column>
+            <column caption='AvgPlayTime' datatype='real' name='[Calculation_7025122858795151364]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='ROUND(AVG([playtime_num]),2)' />
+            </column>
+            <column caption='Avg. Rating' datatype='real' name='[Calculation_7025122858799476741]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='ROUND(AVG([avg_rating]), 2)' />
+            </column>
+            <column caption='BestNumRatings' datatype='integer' name='[Calculation_7025122858806132742]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='MAX([num_ratings])' />
+            </column>
+            <column caption='MostRepresentative' datatype='string' name='[Calculation_7025122858811330567]' role='measure' type='nominal'>
+              <calculation class='tableau' formula='IF MAX([num_ratings]) == [Calculation_7025122858806132742] &#10;THEN MAX([name])&#10;END' />
+            </column>
+            <column caption='Avg Rating' datatype='real' name='[avg_rating]' role='measure' type='quantitative' />
+            <column caption='Category' datatype='string' name='[category]' role='dimension' type='nominal' />
+            <column caption='Min Players' datatype='integer' name='[min_players]' role='measure' type='quantitative' />
+            <column caption='Name' datatype='string' name='[name]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_7025122858597588993]' derivation='None' name='[none:Calculation_7025122858597588993:nk]' pivot='key' type='nominal' />
+            <column-instance column='[category]' derivation='None' name='[none:category:nk]' pivot='key' type='nominal' />
+            <column caption='Num Ratings' datatype='integer' name='[num_ratings]' role='measure' type='quantitative' />
+            <column caption='Playtime Num' datatype='integer' name='[playtime_num]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_7025122858794610691]' derivation='User' name='[usr:Calculation_7025122858794610691:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_7025122858795151364]' derivation='User' name='[usr:Calculation_7025122858795151364:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_7025122858799476741]' derivation='User' name='[usr:Calculation_7025122858799476741:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_7025122858811330567]' derivation='User' name='[usr:Calculation_7025122858811330567:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.11gdwo40hsgk1w11izs5y1svq8ir].[none:Calculation_7025122858597588993:nk] / ([federated.11gdwo40hsgk1w11izs5y1svq8ir].[none:category:nk] / ([federated.11gdwo40hsgk1w11izs5y1svq8ir].[usr:Calculation_7025122858799476741:ok] / ([federated.11gdwo40hsgk1w11izs5y1svq8ir].[usr:Calculation_7025122858795151364:ok] / ([federated.11gdwo40hsgk1w11izs5y1svq8ir].[usr:Calculation_7025122858794610691:ok] / [federated.11gdwo40hsgk1w11izs5y1svq8ir].[usr:Calculation_7025122858811330567:nk])))))</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{74C5B93E-9B7E-4966-AB22-8774D8989549}' />
+    </worksheet>
+    <worksheet name='Sheet 2'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Popular Board Games</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='popular_board_game' name='federated.11gdwo40hsgk1w11izs5y1svq8ir' />
+          </datasources>
+          <datasource-dependencies datasource='federated.11gdwo40hsgk1w11izs5y1svq8ir'>
+            <column caption='TotalNumGames' datatype='integer' name='[Calculation_7025122858794610691]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNT([category] )' />
+            </column>
+            <column caption='Category' datatype='string' name='[category]' role='dimension' type='nominal' />
+            <column-instance column='[category]' derivation='None' name='[none:category:nk]' pivot='key' type='nominal' />
+            <column-instance column='[playtime]' derivation='None' name='[none:playtime:nk]' pivot='key' type='nominal' />
+            <column caption='Playtime' datatype='string' name='[playtime]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_7025122858794610691]' derivation='User' name='[usr:Calculation_7025122858794610691:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.11gdwo40hsgk1w11izs5y1svq8ir].[none:category:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.11gdwo40hsgk1w11izs5y1svq8ir].[usr:Calculation_7025122858794610691:qk]</rows>
+        <cols>([federated.11gdwo40hsgk1w11izs5y1svq8ir].[none:category:nk] / [federated.11gdwo40hsgk1w11izs5y1svq8ir].[none:playtime:nk])</cols>
+      </table>
+      <simple-id uuid='{E90C95CF-E042-4BDB-B2EF-7E86EB85C6E7}' />
+    </worksheet>
+    <worksheet name='Sheet 3'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='mjpetrey/boardgamegeek' name='federated.1dcr6oy0hyxoza10hukj80ncjwoz' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1dcr6oy0hyxoza10hukj80ncjwoz'>
+            <column caption='Category' datatype='string' name='[category]' role='dimension' type='nominal' />
+            <column-instance column='[mechanics]' derivation='Count' name='[cnt:mechanics:qk]' pivot='key' type='quantitative' />
+            <column caption='Max Players' datatype='string' name='[max_players]' role='dimension' type='nominal' />
+            <column caption='Mechanics' datatype='string' name='[mechanics]' role='dimension' type='nominal' />
+            <column-instance column='[category]' derivation='None' name='[none:category:nk]' pivot='key' type='nominal' />
+            <column-instance column='[max_players]' derivation='None' name='[none:max_players:nk]' pivot='key' type='nominal' />
+            <column-instance column='[mechanics]' derivation='None' name='[none:mechanics:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1dcr6oy0hyxoza10hukj80ncjwoz].[none:max_players:nk]'>
+            <groupfilter function='member' level='[none:max_players:nk]' member='&quot;3 Players&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1dcr6oy0hyxoza10hukj80ncjwoz].[none:max_players:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1dcr6oy0hyxoza10hukj80ncjwoz].[none:mechanics:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1dcr6oy0hyxoza10hukj80ncjwoz].[cnt:mechanics:qk]</rows>
+        <cols>[federated.1dcr6oy0hyxoza10hukj80ncjwoz].[none:category:nk]</cols>
+      </table>
+      <simple-id uuid='{4250467A-3AF5-4152-94B7-66CE5AC4B605}' />
+    </worksheet>
+    <worksheet name='Sheet 4'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{B045A051-80CB-487E-BB4F-D09D4B724719}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones />
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='2' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='84000' id='1' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{9307BE95-0027-4DF0-948E-4BD29AC3EA7E}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='51'>
+    <window class='worksheet' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card AVG='true' KURTOSIS='false' MAX='true' MEDIAN='true' MIN='true' QUART1='false' QUART3='false' SKEWNESS='false' STDEV='false' SUM='true' type='summary' />
+          </strip>
+        </edge>
+        <edge name='bottom'>
+          <strip size='94'>
+            <card type='caption' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <floating-toolbar-visibility value='1' />
+      </viewpoint>
+      <simple-id uuid='{4330F5E0-3525-48AF-9491-C02777952087}' />
+    </window>
+    <window class='worksheet' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.11gdwo40hsgk1w11izs5y1svq8ir].[none:category:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{31D91D5F-5328-41BE-A73D-DAE6F0C5A0B0}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Sheet 3'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1dcr6oy0hyxoza10hukj80ncjwoz].[none:max_players:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.1dcr6oy0hyxoza10hukj80ncjwoz].[none:mechanics:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{20457B8E-8E02-41EB-A7B9-76D17A4ABB45}' />
+    </window>
+    <window class='dashboard' name='Dashboard 1'>
+      <viewpoints />
+      <active id='-1' />
+      <simple-id uuid='{464CF167-F820-4B8E-8A2D-9CCA9D8E15F6}' />
+    </window>
+    <window class='worksheet' name='Sheet 4'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{B18E471B-3ACD-4F04-9FF9-265BC8153160}' />
+    </window>
+  </windows>
+</workbook>

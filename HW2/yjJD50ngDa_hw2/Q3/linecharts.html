@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Line Charts</title>
+    <meta charset="utf-8">
+
+    <script type="text/javascript" src="../lib/d3.v5.min.js"></script>
+</head>
+
+<body>
+<div id='signature'>jpineda32</div>
+</body>
+
+
+<script type="module">
+    import {timeFormat} from "https://cdn.skypack.dev/d3-time-format@4";
+
+    const margin = {top: 30, right: 180, bottom: 90, left: 100},
+        width = 960,
+        height = 500
+
+    // create scales x & y for X and Y axis and set their ranges
+    var x = d3.scaleTime()
+        .range([0, width]);
+    var y = d3.scaleLinear()
+        .range([height, 0]);
+
+
+    // append svg element to the body of the page
+    // set dimensions and position of the svg element
+    const svg = d3.select("body").append("svg")
+        .attr("id", "svg-a")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+
+    // Get the data
+    const pathToCsv = "boardgame_ratings.csv";		// path to csv
+    const timeConv = d3.timeParse("%Y-%m-%d");
+    const format = timeFormat("%b %y");
+
+    const dataset = d3.csv(pathToCsv);
+    dataset.then(function (data) {
+        const slices = data.columns.slice(1).map(function (id) {
+
+            return {
+                id: id,
+                values: data.map(function (d) {
+                    // console.log("ID: " + d[id])
+                    return {
+                        date: timeConv(d.date),
+                        measurement: +d[id]
+                    };
+                })
+            };  // END RETURN
+        });
+
+        let i = 0;
+        for (i = 0; i < slices.length; i++) {
+            if (slices[i].id.includes("rank")) {
+                slices.splice(i, 1);
+            }
+        }
+
+        for (i = 0; i < slices.length; i++) {
+            if (slices[i].id.includes("count")) {
+                let idx = slices[i].id.indexOf("=");
+                slices[i].id = slices[i].id.substr(0, idx).trim();
+            }
+        }
+
+        console.log(data);
+        // you should see the data in your browser's developer tools console
+        console.log("Column headers", data.columns);
+        console.log("Column headers without date", data.columns.slice(1));
+        // returns the sliced dataset
+        console.log("Slices", slices);
+        // returns the first slice
+        console.log("First slice", slices[0]);
+        // returns the array in the first slice
+        console.log("A array", slices[0].values);
+        // returns the date of the first row in the first slice
+        console.log("Date element", slices[0].values[0].date);
+        // returns the array's length
+        console.log("Array length", (slices[0].values).length);
+
+        const xScale = d3.scaleTime().range([0, width]);
+        const yScale = d3.scaleLinear().rangeRound([height, 0]);
+
+        xScale.domain(d3.extent(data, function (d) {
+            return timeConv(d.date)
+        }));
+
+        yScale.domain([(0), d3.max(slices, function (c) {
+            return d3.max(c.values, function (d) {
+                return d.measurement + 4;
+            });
+        })]);
+        let id = 0;
+        const color = d3.scaleOrdinal(d3.schemeCategory10);
+        const ids = function () {
+            return "line-" + id++;
+        }
+        let j = 0;
+        const strokes = function(){
+              return color(j++);
+        }
+
+
+        const yaxis = d3.axisLeft().scale(yScale);
+
+        const xaxis = d3.axisBottom()
+            .tickFormat(d3.timeFormat('%b %y'))
+            .scale(xScale);
+
+        const line = d3.line()
+            .x(function (d) {
+                return xScale(d.date);
+            })
+            .y(function (d) {
+                return yScale(d.measurement);
+            });
+
+        const plot_a = svg.append("g")
+            .attr("id", "plot-a")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+        const lines_cont = plot_a.append("g").attr("id", "lines-a")
+
+
+        const lines = lines_cont.selectAll("lines")
+            .data(slices)
+            .enter()
+            .append("g");
+
+        lines.append("path")
+            .attr("fill", "none")
+            .attr("stroke", strokes)
+            .attr("d", function (d) {
+                return line(d.values);
+            });
+        j=0
+        lines.append("text")
+            .attr("fill", strokes)
+            .datum(function (d) {
+                return {
+                    id: d.id,
+                    value: d.values[d.values.length - 1]
+                };
+            })
+            .attr("transform", function (d) {
+                return "translate(" + (xScale(d.value.date) + 10)
+                    + "," + (yScale(d.value.measurement) + 5) + ")";
+            })
+            .attr("x", 5)
+            .text(function (d) {
+                return d.id;
+            });
+        const x_axis = plot_a.append("g")
+            .attr("class", "axis")
+            .attr("id", "x-axis-a")
+            .attr("transform", "translate(0," + height + ")")
+            .call(xaxis);
+
+        x_axis.append("text")
+            .attr("x", width / 2)
+            .attr("y", margin.bottom)
+            .attr("visible", "true")
+            .attr("id", "x-axis-label")
+            .style("text-anchor", "middle")
+            .style("color", "black")
+            .style("font-size", "20px")
+            .style("font-weight", "200")
+            .style("z-index", "17")
+            .text("Month");
+
+        const y_axis = plot_a.append("g")
+            .attr("class", "axis")
+            .attr("id", "y-axis-a")
+            .call(yaxis);
+
+        y_axis.append("text")
+            .attr("x", margin.left)
+            .attr("y", height / 2)
+            .attr("visible", "true")
+            .attr("id", "y-axis-label")
+            .style("text-anchor", "middle")
+            .style("color", "black")
+            .style("font-size", "20px")
+            .style("font-weight", "200")
+            .style("z-index", "17")
+            .text("Number of Ratings");
+
+        svg.append("text")
+            .attr("id", "title-a")
+            .attr("x", width / 2)
+            .attr("y", margin.top)
+            .attr("text-anchor", "middle")
+            .attr("visible", "true")
+            .style("font-size", "21px")
+            .attr("font-weight", "700")
+            .text("Number of Ratings 2016-2020");
+
+    }).catch(function (error) {
+        console.log(error);
+    });
+
+
+</script>
+
+
+
+<script type="module">
+    import {timeFormat} from "https://cdn.skypack.dev/d3-time-format@4";
+
+    const margin = {top: 30, right: 180, bottom: 90, left: 100},
+        width = 960,
+        height = 500
+
+    // create scales x & y for X and Y axis and set their ranges
+    var x = d3.scaleTime()
+        .range([0, width]);
+    var y = d3.scaleLinear()
+        .range([height, 0]);
+
+
+    // append svg element to the body of the page
+    // set dimensions and position of the svg element
+    const svg2 = d3.select("body").append("svg")
+        .attr("id", "svg-b")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+
+    // Get the data
+    const pathToCsv = "boardgame_ratings.csv";		// path to csv
+    const timeConv = d3.timeParse("%Y-%m-%d");
+    const format = timeFormat("%b %y");
+
+    const dataset = d3.csv(pathToCsv);
+    dataset.then(function (data) {
+        const slices = data.columns.slice(1).map(function (id) {
+
+            return {
+                id: id,
+                values: data.map(function (d) {
+                    // console.log("ID: " + d[id])
+                    return {
+                        date: timeConv(d.date),
+                        measurement: +d[id]
+                    };
+                })
+            };  // END RETURN
+        });
+
+        let i = 0;
+        for (i = 0; i < slices.length; i++) {
+            if (slices[i].id.includes("rank")) {
+                slices.splice(i, 1);
+            }
+        }
+
+        for (i = 0; i < slices.length; i++) {
+            if (slices[i].id.includes("count")) {
+                let idx = slices[i].id.indexOf("=");
+                slices[i].id = slices[i].id.substr(0, idx).trim();
+            }
+        }
+
+        console.log(data);
+        // you should see the data in your browser's developer tools console
+        console.log("Column headers", data.columns);
+        console.log("Column headers without date", data.columns.slice(1));
+        // returns the sliced dataset
+        console.log("Slices", slices);
+        // returns the first slice
+        console.log("First slice", slices[0]);
+        // returns the array in the first slice
+        console.log("A array", slices[0].values);
+        // returns the date of the first row in the first slice
+        console.log("Date element", slices[0].values[0].date);
+        // returns the array's length
+        console.log("Array length", (slices[0].values).length);
+
+        const xScale = d3.scaleTime().range([0, width]);
+        const yScale = d3.scaleLinear().rangeRound([height, 0]);
+
+        xScale.domain(d3.extent(data, function (d) {
+            return timeConv(d.date)
+        }));
+
+        yScale.domain([(0), d3.max(slices, function (c) {
+            return d3.max(c.values, function (d) {
+                return d.measurement + 4;
+            });
+        })]);
+        let id = 0;
+        const color = d3.scaleOrdinal(d3.schemeCategory10);
+        const ids = function () {
+            return "line-" + id++;
+        }
+        let j = 0;
+        const strokes = function(){
+              return color(j++);
+        }
+
+        const yaxis = d3.axisLeft().scale(yScale);
+
+        const xaxis = d3.axisBottom()
+            .tickFormat(d3.timeFormat('%b %y'))
+            .scale(xScale);
+
+        const line = d3.line()
+            .x(function (d) {
+                return xScale(d.date);
+            })
+            .y(function (d) {
+                return yScale(d.measurement);
+            });
+
+        const plot_a = svg2.append("g")
+            .attr("id", "plot-a")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+        const lines_cont = plot_a.append("g").attr("id", "lines-a")
+
+
+        const lines = lines_cont.selectAll("lines")
+            .data(slices)
+            .enter()
+            .append("g");
+
+        lines.append("path")
+            .attr("fill", "none")
+            .attr("stroke", strokes)
+            .attr("d", function (d) {
+                return line(d.values);
+            });
+        j=0
+        lines.append("text")
+            .attr("fill", strokes)
+            .datum(function (d) {
+                return {
+                    id: d.id,
+                    value: d.values[d.values.length - 1]
+                };
+            })
+            .attr("transform", function (d) {
+                return "translate(" + (xScale(d.value.date) + 10)
+                    + "," + (yScale(d.value.measurement) + 5) + ")";
+            })
+            .attr("x", 5)
+            .text(function (d) {
+                return d.id;
+            });
+        const x_axis = plot_a.append("g")
+            .attr("class", "axis")
+            .attr("id", "x-axis-a")
+            .attr("transform", "translate(0," + height + ")")
+            .call(xaxis);
+
+        x_axis.append("text")
+            .attr("x", width / 2)
+            .attr("y", margin.bottom)
+            .attr("visible", "true")
+            .attr("id", "x-axis-label")
+            .style("text-anchor", "middle")
+            .style("color", "black")
+            .style("font-size", "20px")
+            .style("font-weight", "200")
+            .style("z-index", "17")
+            .text("Month");
+
+        const y_axis = plot_a.append("g")
+            .attr("class", "axis")
+            .attr("id", "y-axis-a")
+            .call(yaxis);
+
+        y_axis.append("text")
+            .attr("x", margin.left)
+            .attr("y", height / 2)
+            .attr("visible", "true")
+            .attr("id", "y-axis-label")
+            .style("text-anchor", "middle")
+            .style("color", "black")
+            .style("font-size", "20px")
+            .style("font-weight", "200")
+            .style("z-index", "17")
+            .text("Number of Ratings");
+
+        svg.append("text")
+            .attr("id", "title-a")
+            .attr("x", width / 2)
+            .attr("y", margin.top)
+            .attr("text-anchor", "middle")
+            .attr("visible", "true")
+            .style("font-size", "21px")
+            .attr("font-weight", "700")
+            .text("Number of Ratings 2016-2020");
+
+    }).catch(function (error) {
+        console.log(error);
+    });
+
+
+</script>
+
